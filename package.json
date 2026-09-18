@@ -1,0 +1,27 @@
+{
+  "name": "group1_section-a",
+  "version": "1.0.0",
+  "description": "midterm",
+  "keywords": [
+    "midterm"
+  ],
+  "homepage": "https://github.com/Jjorgielou/Group_1_SEC_A_Venerable_#readme",
+  "bugs": {
+    "url": "https://github.com/Jjorgielou/Group_1_SEC_A_Venerable_/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jjorgielou/Group_1_SEC_A_Venerable_.git"
+  },
+  "license": "ISC",
+  "author": "jjorgielou",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": { 
+    "dev": "node index.js", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
