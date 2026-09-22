@@ -1,15 +1,23 @@
-const express = required('express');
+const express = require('express')
+const app = express()
 
-const server = express;
+app.use(express.json());
+
+app.use('/', require('./routes/users.routes'))
+app.use('/api/users', require('./routes/users.routes'))
+app.use('/api/me', require('./routes/users.routes'))
+
+app.use((req,res) => {
+    res.status(404).json({
+        sucess: false,
+        error:{
+        code: "NOT FOUND",
+        message: "The requested endpoint does not exist on this server."
+        }
+    })
+})
+
 const PORT = 1234;
-const HOSTNAME = '0.0.0.0'
-server.listen(PORT, HOSTNAME,() => {
-    console.log(`Server is running on :${PORT}:$(HOSTNAME)
-        `)
-    });
-    
-application.use(express.json());
-application.use(requireAuth);
-application.use(/api/users, /api/products, /api/orders, /api/categories, routes);
-
-    
+app.listen(PORT, () => {
+	console.log('Server is running on http://localhost:1234')
+})
